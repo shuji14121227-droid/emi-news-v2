@@ -1,4 +1,4 @@
-# 🔬 半導体最新論文レポート (2026-03-21 18:05)
+# 🔬 半導体最新論文レポート (2026-03-21 18:13)
 
 ## Directional atomic layer etching of MgO-doped lithium niobate using Br-based plasma
 
