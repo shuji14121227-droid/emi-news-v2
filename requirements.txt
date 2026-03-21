@@ -1,2 +1,2 @@
 arxiv
-google-generativeai>=0.8.0
+google-genai
