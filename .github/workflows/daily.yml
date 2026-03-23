@@ -22,6 +22,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md history.txt index.html styles.css
+          git add README.md history.txt index.html styles.css archive
           git commit -m "Update Daily Report and History" || exit 0
           git push
