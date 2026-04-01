@@ -1,60 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>半導体ニュース＆論文レポート</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi Semi News - Semiconductor Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
     <header class="site-header">
-      <div class="container">
-        <h1 class="title">🔬 半導体ニュース＆論文レポート</h1>
-        <p class="subtitle">生成日時: 2026-03-26 02:27 / ニュース: 12件 / 論文: 0件</p>
-      </div>
+        <div class="container">
+            <h1 class="logo">Emi Semi News</h1>
+            <p class="tagline">Analyzing the Future of Semiconductors & Nanotechnology</p>
+            <nav class="nav-links">
+                <a href="#daily">Daily Report</a>
+                <a href="#archive">Archive</a>
+            </nav>
+        </div>
     </header>
 
     <main class="container">
-      <section aria-label="業界ニュース">
-        <h2 class="section-title">📰 今日の業界ニュース（Google等）</h2>
-        <div class="grid">
-          <article class="card card--news">
-            <div class="card__thumb-wrap card__thumb-wrap--placeholder" aria-hidden="true">
-              <div class="card__thumb-placeholder">No Image</div>
+        <section id="daily" class="news-section">
+            <div class="section-header">
+                <h2>今週の技術的進歩</h2>
+                <span class="date-badge">2026.04.01 Updated</span>
             </div>
-            <h2 class="card__title">AI boom accelerates China&#x27;s chip industry growth - Reuters</h2>
-            <div class="card__meta-row">
-              <span class="badge">Google News</span>
-              <span class="published">Wed, 25 Mar 2026 22:19:55 GMT</span>
-            </div>
-            <div class="card__meta">
-              <a class="card__link" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tTWFtdHdvRDRFWXZxWWFkbV9CRnBTa1BsbVpIaW5KNVJaS2szajRkUkowQ2FGSlF3U2U2eW1SU1lkN1pwbDZFdVhUX0s3cHp5WjFXU3B5Y2oyRmpoS29uMjN3YlBhdw?oc=5" target="_blank" rel="noopener noreferrer">ニュースを開く</a>
-              <p class="card__url">
-                <span class="card__url-label">URL</span>:
-                <a class="card__url-link" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tTWFtdHdvRDRFWXZxWWFkbV9CRnBTa1BsbVpIaW5KNVJaS2szajRkUkowQ2FGSlF3U2U2eW1SU1lkN1pwbDZFdVhUX0s3cHp5WjFXU3B5Y2oyRmpoS29uMjN3YlBhdw?oc=5" target="_blank" rel="noopener noreferrer">https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tTWFtdHdvRDRFWXZxWWFkbV9CRnBTa1BsbVpIaW5KNVJaS2szajRkUkowQ2FGSlF3U2U2eW1SU1lkN1pwbDZFdVhUX0s3cHp5WjFXU3B5Y2oyRmpoS29uMjN3YlBhdw?oc=5</a>
-              </p>
-            </div>
-            <details class="card__details">
-              <summary class="card__details-summary">概要</summary>
-              <div class="card__summary">&lt;a href=&quot;https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tTWFtdHdvRDRFWXZxWWFkbV9CRnBTa1BsbVpIaW5KNVJaS2szajRkUkowQ2FGSlF3U2U2eW1SU1lkN1pwbDZFdVhUX0s3cHp5WjFXU3B5Y2oyRmpoS29uMjN3YlBhdw?oc=5&quot; target=&quot;_blank&quot;&gt;AI boom accelerates China&#x27;s chip industry growth&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;#6f6f6f&quot;&gt;Reuters&lt;/font&gt;</div>
-            </details>
-          </article>
-          <!-- Additional articles go here -->
-        </div>
-      </section>
+            
+            <div class="grid" id="news-grid">
+                <article class="card card--featured">
+                    <div class="card__content">
+                        <span class="badge">Trending</span>
+                        <h3>TSMC 2nm (N2P) の歩留まりが70%を突破</h3>
+                        <p class="summary">GAAナノシートと裏面電源供給（BSPDN）の導入により、次世代AIチップの消費電力が25%削減される見込みです。</p>
+                        <a href="#" class="read-more">分析記事を読む →</a>
+                    </div>
+                </article>
 
-      <section class="archive-section" aria-label="過去の日付">
-        <h2 class="section-title">過去のアーカイブ</h2>
-        <div class="archive-list">
-          <a class="archive-item" href="archive/2026-03-26/index.html">2026-03-26</a>
-          <a class="archive-item" href="archive/2026-03-25/index.html">2026-03-25</a>
-          <a class="archive-item" href="archive/2026-03-24/index.html">2026-03-24</a>
-          <a class="archive-item" href="archive/2026-03-23/index.html">2026-03-23</a>
-        </div>
-      </section>
+                <article class="card">
+                    <div class="card__content">
+                        <span class="badge">Research</span>
+                        <h3>HBM4の規格化完了とAIインフラへの影響</h3>
+                        <p class="summary">2048ビットの広帯域インターフェースにより、NVIDIA Rubinの性能がBlackwell比で3倍向上へ。</p>
+                        <a href="#" class="read-more">詳細はこちら</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer>
-      <p>© 2026 半導体ニュース＆論文レポート</p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Shuji Azumada. Built for Semiconductor FAE Career.</p>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
