@@ -126,43 +126,29 @@ def build_paper_card_html(p: dict) -> str:
 
 def build_news_card_html(n: dict) -> str:
     title = html.escape(str(n["title"]))
-    url_raw = str(n["url"])
-    url = html.escape(url_raw, quote=True)
+    url = html.escape(str(n["url"]), quote=True)
     summary = html.escape(str(n["summary"]))
     source = html.escape(str(n.get("source", "RSS")))
     published = html.escape(str(n.get("published", "")))
-    image_url_raw = str(n.get("image_url", "")).strip()
-    image_url = html.escape(image_url_raw, quote=True)
+    image_url = html.escape(str(n.get("image_url", "")).strip(), quote=True)
 
-    image_block = ""
-    if image_url_raw:
-        image_block = f"""<div class="card__thumb-wrap">
-    <img class="card__thumb" src="{image_url}" alt="{title}" loading="lazy" referrerpolicy="no-referrer" />
-  </div>"""
-    else:
-        image_block = """<div class="card__thumb-wrap card__thumb-wrap--placeholder" aria-hidden="true">
-    <div class="card__thumb-placeholder">No Image</div>
-  </div>"""
+    # 画像がある場合とない場合でリッチに切り替え
+    image_html = f'<img class="card__thumb" src="{image_url}" alt="" loading="lazy">' if image_url else '<div class="card__thumb-placeholder">No Image</div>'
 
-    return f"""<article class="card card--news">
-  {image_block}
-  <h2 class="card__title">{title}</h2>
-  <div class="card__meta-row">
-    <span class="badge">{source}</span>
-    <span class="published">{published}</span>
-  </div>
-  <div class="card__meta">
-    <a class="card__link" href="{url}" target="_blank" rel="noopener noreferrer">ニュースを開く</a>
-    <p class="card__url">
-      <span class="card__url-label">URL</span>:
-      <a class="card__url-link" href="{url}" target="_blank" rel="noopener noreferrer">{html.escape(url_raw)}</a>
-    </p>
-  </div>
-  <details class="card__details">
-    <summary class="card__details-summary">概要</summary>
-    <div class="card__summary">{summary}</div>
-  </details>
-</article>"""
+    return f"""
+    <article class="card">
+        <div class="card__image-area">{image_html}</div>
+        <div class="card__content">
+            <span class="badge">{source}</span>
+            <h3 class="card__title"><a href="{url}" target="_blank">{title}</a></h3>
+            <p class="summary">{summary[:120]}...</p>
+            <div class="card__footer">
+                <span class="date">{published}</span>
+                <a href="{url}" class="read-more" target="_blank">Read More →</a>
+            </div>
+        </div>
+    </article>
+    """
 
 
 def build_two_sections_html(news_items: list[dict], papers: list[dict]) -> str:
